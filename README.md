@@ -1,5 +1,3 @@
----
-
 # 0) 프로젝트 생성 (루트)
 
 ```powershell
@@ -293,17 +291,4 @@ npm run start   # Express가 client/dist 서빙 + API
 ```
 
 * 접속: [http://localhost:5000](http://localhost:5000)
-
----
-
-# 체크리스트 (이번에 겪은 에러들 방지)
-
-* **Express v5**: `app.get("*")` 쓰지 말고, `app.use((req,res)=>...)`로 SPA fallback ✅
-* **ESM 실행**: 개발은 `tsx watch` 사용 ✅
-* **Prisma v6**:
-
-  * `schema.prisma`의 datasource엔 **`url = env("DATABASE_URL")`만** 둔다 ✅
-  * `.env`는 `server/.env`에 두고, 그래도 못 읽으면 **최종 커맨드**로 해결:
-    `$env:DATABASE_URL="file:./dev.db"; npx prisma generate` ✅
-
----
+* 
